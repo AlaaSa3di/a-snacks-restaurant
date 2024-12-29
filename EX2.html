@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+  //EX2
+  
+  let Name =prompt("enter your name");
+        let Gender
+        while (true) {
+        if (Gender == "male" || Gender == "female") {
+          break;
+        }
+        Gender = prompt("Please enter your gender (male or female):");
+      }
+     
+        if (Gender=="male") {
+            alert("Welcome Mr " + " " + Name)
+        } else if (Gender=="female") {
+            alert("Welcome Ms "+ " "  + Name)}
+
+        let Order =prompt("Did you wants to order a shawarma, zinger, or burger");
+        let Name_oreder=prompt("write the name of the order");
+        alert("Your order"+" "+ Name_oreder +" " +"is being prepared ") ;
+        console.log(Name,Name_oreder);   
+
+//EX2_Q1
+// for (let i = 0; i <= 5; i++) {
+//     alert(i);
+// }
+
+
+//EX2_Q4: Prompt the user for a number in the range 0…100 until valid
+// let Num;
+//       while (true) {
+//         Num = parseInt(
+//           prompt("Please enter a number between 0 and 100:")
+//         );
+//         if (Num >= 0 && Num <= 100) {
+//           break;
+//         } else {
+//           alert("Error: Please enter a number in the range 0-100.");
+//         }
+//       }
+
+      // EX2_Q5
+    //   let Num = parseInt(prompt("Please enter an integer:"));
+    //   let Sum = 0;
+    //   for (let i = 0; i <= Num; i++) {
+    //     Sum = Sum + i;
+    //   }
+    //   alert(`The sum of integers from 0 to ${Num} is ${Sum}.`);
+
+    </script>
+</body>
+</html>
