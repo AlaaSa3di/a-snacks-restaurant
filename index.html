@@ -6,51 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-   
-    <script>
- //EX2
-function askGender() {
-    let gender;
-    while (true) {
-        gender = prompt("Please enter your gender (male or female):");
-        if (gender === "male" || gender === "female") {
-            break; 
-        }
-    }
-    return gender; 
-}
-
-
-let Name = prompt("Enter your name");
-let Gender = askGender(); 
-
-if (Gender === "male") {
-    alert("Welcome Mr. " + Name);
-} else if (Gender === "female") {
-    alert("Welcome Ms. " + Name);
-}
-
-let Order = prompt("Do you want to order a shawarma, zinger, or burger?");
-let Name_order = prompt("Write the name of the order");
-alert("Your order " + Name_order + " is being prepared.");
-
-console.log(Name, Name_order);
-
-let Details = [Name, Gender, Order];
-console.log(Details);
-
-let text = "";
-for (let i = 0; i < Details.length; i++) {
-    text = Details[i];
-    console.log(text);
-}
-
-
-
-
- 
-
-
+   <div id="parent">
+    <p class="Name"></p>
+    <ol>
+        <li class="Gender"></li>
+        <li class="Age"></li>
+        <li class="Order"></li>
+    </ol>
+   </div>
+    <script src="app.js">
 
     </script>
 </body>
