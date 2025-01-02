@@ -1,30 +1,34 @@
-let Name = prompt("Enter your name");
-function askGender() {
-    let gender;
-    while (true) {
-        gender = prompt("Please enter your gender (male or female):");
-        if (gender === "male" || gender === "female") {
-            break; 
-        }
+const submitBtn = document.getElementById('submitBtn');
+submitBtn.addEventListener('click', () => {    
+    const userName = document.getElementById("username").value;
+    const Age = document.getElementById("Age").value;
+    const Gender = document.getElementById("Gender").value;
+    const orderType = document.getElementById("orderType").value
+    let yourOrder =''
+    if (document.getElementById('shawarma').checked) {
+        yourOrder = 'Shawarma';
+    } else if (document.getElementById('zinger').checked) {
+        yourOrder = 'Zinger';
+    } else if (document.getElementById('burger').checked) {
+        yourOrder = 'Burger';
     }
-    return gender; 
-}
-let Gender = askGender(); 
-let Age = prompt("Enter your Age");
-let Order = prompt("Enter your order");
-if (Gender === "male") {
-    const element = document.getElementsByClassName('Name')[0];
-    element.textContent = ` Welcome Mr.  ${Name}`;
-} else if (Gender === "female") {
-    const element = document.getElementsByClassName('Name')[0];
-    element.textContent = ` Welcome Ms.  ${Name}`;
-}
-Gen = document.getElementsByClassName("Gender")[0];
-Gen.textContent = `Your Gender: ${Gender}`;
-Ord = document.getElementsByClassName('Order')[0];
-Ord.textContent = ` Your order: ${Order}`;
-X = document.getElementsByClassName('Age')[0];
-X.textContent = ` Your Age: ${Age}`;
+    let combSand = '';
+    if (document.getElementById('combo').checked) {
+        combSand = 'combo';
+    } else if (document.getElementById('sandwich').checked) {
+        combSand = 'sandwich';
+    }
+
+let output=document.getElementById("details");
+output.innerText = `
+Username: ${userName}
+Age: ${Age}
+Gender: ${Gender}
+Order Type: ${orderType}
+Your Order: ${yourOrder}
+Your choice: ${combSand}
+`;
+})
 
 
 

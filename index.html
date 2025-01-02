@@ -3,19 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Order info.</title>
 </head>
 <body>
-   <div id="parent">
-    <p class="Name"></p>
-    <ol>
-        <li class="Gender"></li>
-        <li class="Age"></li>
-        <li class="Order"></li>
-    </ol>
-   </div>
-    <script src="app.js">
+    <h2>Welcom to a snacks restaurant</h2>
+    <div><h3>Enter details for your order</h3></div>
+  <form id="orderForm">
+    <label for="username">User name:</label>
+    <input type="text" id="username" name="username"><br><br>
 
-    </script>
+    <label for="Age">Age :</label>
+    <input type="number" id="Age" name="Age"><br><br>
+
+    <label>Gender:</label>
+    <select name="Gender" id="Gender"> 
+        <option value="Male" id="Male">Male</option>
+        <option value="Female" id="Female">Female</option>
+    </select><br><br>
+
+    <label for="orderType">Order Type:</label>
+    <input type="text" id="orderType" name="orderType"><br><br>
+
+    <label id="orderItem">Order Items:</label>
+    <input type="checkbox" id="shawarma" name="order-item" value="Shawarma">
+    <label for="shawarma">Shawarma</label>
+    <input type="checkbox" id="zinger" name="order-item" value="Zinger">
+    <label for="zinger">Zinger</label>
+    <input type="checkbox" id="burger" name="order-item" value="Burger">
+    <label for="burger">Burger</label><br><br>
+
+    <label>Combo or Sandwich:</label><br>
+    <input type="radio" id="combo" name="combo-sandwich" value="Combo">
+    <label for="combo">Combo</label><br>
+    <input type="radio" id="sandwich" name="combo-sandwich" value="Sandwich">
+    <label for="sandwich">Sandwich</label><br><br>
+
+    <button type="button" id="submitBtn">Submit</button>
+  </form>
+ <h3>Order Details:</h3>   
+<div id="details"></div>
+
+
+
+<script src="app.js"></script>
 </body>
 </html>
